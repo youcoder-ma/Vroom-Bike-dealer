@@ -9,19 +9,16 @@ namespace Vroom.Controllers
 {
     public class MakeController : Controller
     {
-        //make/bikes
-        [Route("make")]
-        [Route("make/bikes")]
-        public IActionResult Bikes()
+        private readonly VroomDbContext _VDbContext;
+
+        public MakeController(VroomDbContext VDbContext)
         {
-            Make make = new Make { Id = 0, Name = "Harley Davidson" };
-            return View(make);
+            _VDbContext = VDbContext;
         }
 
-        [Route("make/bikes/{year:int:length(4)}/{month:int:range(1,13)}")]
-        public IActionResult ByYearMonth(int year, int month)
+        public IActionResult Index()
         {
-            return Content(year + ";" + month);
+            return View(_VDbContext.Makes.ToList());
         }
     }
 }

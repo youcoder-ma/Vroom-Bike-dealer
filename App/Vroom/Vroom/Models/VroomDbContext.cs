@@ -15,5 +15,15 @@ namespace Vroom.Models
 
         public DbSet<Make> Makes { get; set; }
         public DbSet<Model> Models { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Make>().HasData(
+                new {Id=1, Name="Hero Honda"},
+                new {Id=2, Name="Harley Davidson"}
+                );
+        }
     }
 }

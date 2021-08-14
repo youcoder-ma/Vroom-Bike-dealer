@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Vroom.Models;
 
 namespace Vroom.Migrations
 {
     [DbContext(typeof(VroomDbContext))]
-    partial class VroomDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210814151254_damidata")]
+    partial class damidata
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
