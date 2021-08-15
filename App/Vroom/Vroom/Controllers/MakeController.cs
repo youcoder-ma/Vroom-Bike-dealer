@@ -20,5 +20,25 @@ namespace Vroom.Controllers
         {
             return View(_VDbContext.Makes.ToList());
         }
+
+
+        //Http Get Method
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Make make)
+        {
+            if (ModelState.IsValid)
+            {
+                _VDbContext.Add(make);
+                _VDbContext.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(make);
+        }
     }
 }

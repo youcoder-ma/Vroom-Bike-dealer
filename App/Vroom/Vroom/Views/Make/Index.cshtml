@@ -10,8 +10,8 @@
     <div class="col-6">
         <h2 class="text-infos">Makes of vehicle</h2>
     </div>
-    <div class="col-6 text-right">
-        <a class="btn btn-info" asp-action="Create">Add new make</a>
+    <div class="col-6 text-right ">
+        <a class="btn btn-info" asp-action="Create">Add New Make</a>
     </div>
     <br />
     <div class="col-12">
@@ -20,6 +20,7 @@
                 <th>
                     @Html.DisplayNameFor(m => m.Name)
                 </th>
+                <th></th>
             </tr>
             @foreach (var item in Model)
             {
