@@ -53,5 +53,18 @@ namespace Vroom.Controllers
             _VDbContext.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
+
+        [HttpPost]
+        public IActionResult Edit(Make make)
+        {
+            if (ModelState.IsValid)
+            {
+                _VDbContext.Update(make);
+                _VDbContext.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(make);
+        }
     }
 }
