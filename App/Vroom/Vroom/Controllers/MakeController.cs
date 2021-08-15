@@ -41,7 +41,7 @@ namespace Vroom.Controllers
             return View(make);
         }
 
-        
+        [HttpPost]
         public IActionResult Delete(int id)
         {
             var make = _VDbContext.Makes.Find(id);
