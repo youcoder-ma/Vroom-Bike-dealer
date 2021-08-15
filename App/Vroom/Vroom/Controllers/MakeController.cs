@@ -40,5 +40,18 @@ namespace Vroom.Controllers
 
             return View(make);
         }
+
+        
+        public IActionResult Delete(int id)
+        {
+            var make = _VDbContext.Makes.Find(id);
+            if(make == null)
+            {
+                return NotFound();
+            }
+            _VDbContext.Makes.Remove(make);
+            _VDbContext.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
