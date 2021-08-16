@@ -34,3 +34,4 @@ C:\Users\Youcode\Desktop\Projects\Vroom-Bike-dealer\App\Vroom\Vroom\obj\Debug\ne
 C:\Users\Youcode\Desktop\Projects\Vroom-Bike-dealer\App\Vroom\Vroom\obj\Debug\netcoreapp2.1\Razor\Views\Make\Index.g.cshtml.cs
 C:\Users\Youcode\Desktop\Projects\Vroom-Bike-dealer\App\Vroom\Vroom\obj\Debug\netcoreapp2.1\Razor\Views\Make\Create.g.cshtml.cs
 C:\Users\Youcode\Desktop\Projects\Vroom-Bike-dealer\App\Vroom\Vroom\obj\Debug\netcoreapp2.1\Razor\Views\Make\Edit.g.cshtml.cs
+C:\Users\Youcode\Desktop\Projects\Vroom-Bike-dealer\App\Vroom\Vroom\obj\Debug\netcoreapp2.1\Razor\Views\Model\Index.g.cshtml.cs
