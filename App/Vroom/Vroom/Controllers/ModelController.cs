@@ -31,5 +31,24 @@ namespace Vroom.Controllers
             var model = _VDbContext.Models.Include(m => m.Make);
             return View(model);
         }
+
+
+        //HTTP GET
+        public IActionResult Create()
+        {
+            return View(ModelVM);
+        }
+
+        [HttpPost, ActionName("Create")]
+        public IActionResult CreatePost()
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(ModelVM);
+            }
+            _VDbContext.Models.Add(ModelVM.Model);
+            _VDbContext.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
