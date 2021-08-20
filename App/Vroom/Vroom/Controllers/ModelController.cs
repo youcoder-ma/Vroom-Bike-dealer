@@ -73,5 +73,17 @@ namespace Vroom.Controllers
             _VDbContext.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
+
+        public IActionResult Delete(int id)
+        {
+            var model = _VDbContext.Models.Find(id);
+            if (model == null)
+            {
+                return NotFound();
+            }
+            _VDbContext.Models.Remove(model);
+            _VDbContext.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
