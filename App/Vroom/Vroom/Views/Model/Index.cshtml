@@ -16,14 +16,14 @@
     <div class="col-12">
         <table class="table table-striped border">
             <tr class="table-info">
-                <th>@Html.DisplayNameFor(m => m.Make)</th>
+                <th>@Html.DisplayNameFor(m => m.make)</th>
                 <th>@Html.DisplayNameFor(m => m.Name)</th>
                 <th></th>
             </tr>
             @foreach(var item in Model)
             {
             <tr>
-                <td>@Html.DisplayFor(m => item.Make.Name)</td>
+                <td>@Html.DisplayFor(m => item.make.Name)</td>
                 <td>@Html.DisplayFor(m => item.Name)</td>
                 <td class="text-right">
                     <div class="btn-group" role="group">

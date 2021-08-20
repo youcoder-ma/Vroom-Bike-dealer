@@ -28,7 +28,7 @@ namespace Vroom.Controllers
         }
         public IActionResult Index()
         {
-            var model = _VDbContext.Models.Include(m => m.Make);
+            var model = _VDbContext.Models.Include(m => m.make);
             return View(model);
         }
 
@@ -47,6 +47,29 @@ namespace Vroom.Controllers
                 return View(ModelVM);
             }
             _VDbContext.Models.Add(ModelVM.Model);
+            _VDbContext.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }   
+
+        //Http Get
+        public IActionResult Edit(int id)
+        {
+            ModelVM.Model = _VDbContext.Models.Include(m => m.make).SingleOrDefault(m => m.Id == id);
+            if(ModelVM.Model == null)
+            {
+                return NotFound();
+            }
+            return View(ModelVM);
+        }
+
+        [HttpPost, ActionName("Edit")]
+        public IActionResult EditPost()
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(ModelVM);
+            }
+            _VDbContext.Update(ModelVM.Model);
             _VDbContext.SaveChanges();
             return RedirectToAction(nameof(Index));
         }

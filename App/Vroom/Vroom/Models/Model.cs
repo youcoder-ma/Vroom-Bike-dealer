@@ -15,7 +15,8 @@ namespace Vroom.Models
         [StringLength(255)]
         public string Name { get; set; }
 
-        public Make Make { get; set; }
+
+        public Make make { get; set; }
 
         [ForeignKey("Make")]
         public int MakeId { get; set; }
