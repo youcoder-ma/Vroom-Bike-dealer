@@ -37,3 +37,4 @@ C:\Users\Youcode\Desktop\Projects\Vroom-Bike-dealer\App\Vroom\Vroom\obj\Debug\ne
 C:\Users\Youcode\Desktop\Projects\Vroom-Bike-dealer\App\Vroom\Vroom\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
 C:\Users\Youcode\Desktop\Projects\Vroom-Bike-dealer\App\Vroom\Vroom\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
 C:\Users\Youcode\Desktop\Projects\Vroom-Bike-dealer\App\Vroom\Vroom\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Youcode\Desktop\Projects\Vroom-Bike-dealer\App\Vroom\Vroom\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_TableButtonPartial.g.cshtml.cs
