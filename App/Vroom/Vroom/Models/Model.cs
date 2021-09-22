@@ -9,6 +9,7 @@ namespace Vroom.Models
 {
     public class Model
     {
+        [Key]
         public int Id { get; set; }
 
         [Required]
