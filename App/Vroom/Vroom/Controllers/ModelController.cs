@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Vroom.Models;
@@ -9,6 +10,7 @@ using Vroom.Models.ViewModels;
 
 namespace Vroom.Controllers
 {
+    [Authorize(Roles = ("Admin,Executive"))]
     public class ModelController : Controller
     {
         private readonly VroomDbContext _VDbContext;

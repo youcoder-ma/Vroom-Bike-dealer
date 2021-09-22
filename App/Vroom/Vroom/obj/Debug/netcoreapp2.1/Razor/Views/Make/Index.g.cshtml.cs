@@ -64,7 +64,7 @@ using Vroom.Models;
             WriteLiteral("\r\n<br />\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-6\">\r\n        <h2 class=\"text-infos\">Makes of vehicle</h2>\r\n    </div>\r\n    <div class=\"col-6 text-right \">\r\n        ");
             EndContext();
             BeginContext(294, 101, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "27409d9cfc2541c8b4eb7f8fc8e5ec52", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1cfebf838c2a4e78ab4198c11aaa80d9", async() => {
                 BeginContext(338, 53, true);
                 WriteLiteral("<i class=\"fas fa-motorcycle\"></i> &nbsp; Add new Make");
                 EndContext();
@@ -116,7 +116,7 @@ using Vroom.Models;
             WriteLiteral("\r\n                </td>\r\n                ");
             EndContext();
             BeginContext(872, 54, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "b50a59f6403a4ea7a2d4b38cb30779c6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "94fa17b5685147c1af44a6b97c7b5e7d", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
