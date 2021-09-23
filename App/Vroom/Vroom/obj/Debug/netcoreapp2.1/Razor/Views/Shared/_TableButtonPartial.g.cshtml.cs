@@ -64,12 +64,12 @@ using Vroom.Models;
             WriteLiteral("\r\n<td class=\"text-right\">\r\n    <div class=\"btn-group\" role=\"group\">\r\n        ");
             EndContext();
             BeginContext(209, 198, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "351dcaebc74f463e88854095979f7def", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8dc6f3e1c47f4abe9b16e090d4147dcf", async() => {
                 BeginContext(243, 14, true);
                 WriteLiteral("\r\n            ");
                 EndContext();
                 BeginContext(257, 133, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a9b522066aad4fd8b227f43e08d0f809", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "419b2f6d1d364e29ba2d7a73749579c0", async() => {
                     BeginContext(354, 27, true);
                     WriteLiteral("<i class=\"fas fa-edit\"></i>");
                     EndContext();
@@ -126,12 +126,12 @@ using Vroom.Models;
             WriteLiteral("\r\n        ");
             EndContext();
             BeginContext(417, 280, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "61997360662e46d898f480b0a0400c1f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f8f3dae5aa7c4410ab649afba7e52638", async() => {
                 BeginContext(453, 14, true);
                 WriteLiteral("\r\n            ");
                 EndContext();
                 BeginContext(467, 213, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f23fabb0817f49a2b160ddafebf3c0d5", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c69275beb9b2446cb24318bd5e7a48a3", async() => {
                     BeginContext(639, 32, true);
                     WriteLiteral("<i class=\"fas fa-trash-alt\"></i>");
                     EndContext();

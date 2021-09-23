@@ -34,7 +34,7 @@ namespace Vroom
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<VroomDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
+            services.AddDbContext<VroomDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("HostedDb")));
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<VroomDbContext>()
                 .AddDefaultUI()

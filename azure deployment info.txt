@@ -1,0 +1,12 @@
+Server name
+vrommserver
+
+Server admin login
+vrommadmin
+
+db name :  Vroom
+
+
+Jerome Cortez
+jeromecortez02@outlook.com
+Cortez1@
