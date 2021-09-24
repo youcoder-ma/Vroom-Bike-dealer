@@ -36,13 +36,13 @@
                             Masters
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" asp-controller="Make" asp-action="Index">Makes</a>
-                            <a class="dropdown-item" asp-controller="Model" asp-action="Index">Models</a>
+                            <li><a class="dropdown-item" asp-controller="Make" asp-action="Index">Makes</a></li>
+                            <li><a class="dropdown-item" asp-controller="Model" asp-action="Index">Models</a></li>
                             @if (User.IsInRole(Roles.Admin))
                             {
-                                <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Add User</a>
+                                <li><a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Add User</a></li>
                             }
-                        </ul>
+                            </ul>
                     </li>
                     }
                 </ul>
