@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Vroom.Data;
 using Vroom.Models;
 
 namespace Vroom
@@ -40,11 +41,12 @@ namespace Vroom
                 .AddDefaultUI()
                 .AddDefaultTokenProviders();
 
+            services.AddScoped<IDbInitializer, DbInitializer>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IDbInitializer dbInitializer)
         {
             if (env.IsDevelopment())
             {
@@ -60,6 +62,7 @@ namespace Vroom
             app.UseStaticFiles();
             app.UseAuthentication();
             app.UseCookiePolicy();
+            dbInitializer.Initialize();
 
             app.UseMvc(routes =>
             {
