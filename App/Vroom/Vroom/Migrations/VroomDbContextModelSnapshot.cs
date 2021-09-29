@@ -185,6 +185,46 @@ namespace Vroom.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Vroom.Models.Bike", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Currency")
+                        .IsRequired();
+
+                    b.Property<string>("Features");
+
+                    b.Property<string>("ImagePath");
+
+                    b.Property<int>("MakeId");
+
+                    b.Property<int>("Milleage");
+
+                    b.Property<int>("ModelId");
+
+                    b.Property<int>("Price");
+
+                    b.Property<string>("SellerEmail");
+
+                    b.Property<string>("SellerName")
+                        .IsRequired();
+
+                    b.Property<string>("SellerPhone")
+                        .IsRequired();
+
+                    b.Property<int>("Year");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MakeId");
+
+                    b.HasIndex("ModelId");
+
+                    b.ToTable("Bikes");
+                });
+
             modelBuilder.Entity("Vroom.Models.Make", b =>
                 {
                     b.Property<int>("Id")
@@ -277,6 +317,19 @@ namespace Vroom.Migrations
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser")
                         .WithMany()
                         .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Vroom.Models.Bike", b =>
+                {
+                    b.HasOne("Vroom.Models.Make", "Make")
+                        .WithMany()
+                        .HasForeignKey("MakeId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Vroom.Models.Model", "Model")
+                        .WithMany()
+                        .HasForeignKey("ModelId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

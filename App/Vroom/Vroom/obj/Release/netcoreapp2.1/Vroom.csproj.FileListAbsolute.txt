@@ -74,3 +74,4 @@ C:\Users\Youcode\Desktop\Projects\Vroom-Bike-dealer\App\Vroom\Vroom\obj\Release\
 C:\Users\Youcode\Desktop\Projects\Vroom-Bike-dealer\App\Vroom\Vroom\obj\Release\netcoreapp2.1\Vroom.dll
 C:\Users\Youcode\Desktop\Projects\Vroom-Bike-dealer\App\Vroom\Vroom\obj\Release\netcoreapp2.1\Vroom.pdb
 C:\Users\Youcode\Desktop\Projects\Vroom-Bike-dealer\App\Vroom\Vroom\obj\Release\netcoreapp2.1\Vroom.csproj.CopyComplete
+C:\Users\Youcode\Desktop\Projects\Vroom-Bike-dealer\App\Vroom\Vroom\obj\Release\netcoreapp2.1\Razor\Views\Bike\Index.g.cshtml.cs

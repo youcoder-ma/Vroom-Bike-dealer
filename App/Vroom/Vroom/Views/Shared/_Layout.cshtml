@@ -38,11 +38,12 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" asp-controller="Make" asp-action="Index">Makes</a></li>
                             <li><a class="dropdown-item" asp-controller="Model" asp-action="Index">Models</a></li>
+                            <li><a class="dropdown-item" asp-controller="Bike" asp-action="Index">Bikes</a></li>
                             @if (User.IsInRole(Roles.Admin))
                             {
                                 <li><a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Add User</a></li>
                             }
-                            </ul>
+                        </ul>
                     </li>
                     }
                 </ul>
