@@ -6,19 +6,23 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Vroom.Models;
 using Vroom.Models.ViewModels;
+using System.IO;
+using Microsoft.AspNetCore.Hosting.Internal;
 
 namespace Vroom.Controllers
 {
     public class BikeController : Controller
     {
         private readonly VroomDbContext _VDbContext;
+        private readonly HostingEnvironment _hostingEnvironment;
 
         [BindProperty]
         public BikeViewModel BikeVM { get; set; }
 
-        public BikeController(VroomDbContext VDbContext)
+        public BikeController(VroomDbContext VDbContext, HostingEnvironment hostingEnvironment)
         {
             _VDbContext = VDbContext;
+            _hostingEnvironment = hostingEnvironment;
 
             BikeVM = new BikeViewModel()
             {
@@ -51,6 +55,48 @@ namespace Vroom.Controllers
             }
             _VDbContext.Bikes.Add(BikeVM.Bike);
             _VDbContext.SaveChanges();
+
+            /////////////////////////
+            /// Save Bike Logic//////
+            ////////////////////////
+
+            //Get bike Id we have saved in db
+            var BikeId = BikeVM.Bike.Id;
+
+            //Get wwwrootPath to save the file on server 
+            string wwwrootPath = _hostingEnvironment.WebRootPath;
+
+            //Get the uploaded files 
+            var files = HttpContext.Request.Form.Files;
+
+            //Get the reference of DbSet for the bike we just saved in database 
+            var SavedBike = _VDbContext.Bikes.Find(BikeId);
+
+            //Upload the files on server and save the image path uploaded by user if any 
+
+            if (files.Count != 0)
+            {
+                var ImagePath = @"images\bike\";
+                var Extension = Path.GetExtension(files[0].FileName);
+                var RelativeImagePath = ImagePath + BikeId + Extension;
+                var AbsImagePath = Path.Combine(wwwrootPath, RelativeImagePath);
+
+                //Upload file on server
+                using (var fileStream = new FileStream(AbsImagePath, FileMode.Create))
+                {
+                    files[0].CopyTo(fileStream);
+                }
+
+                //Set the image path on database 
+                SavedBike.ImagePath = RelativeImagePath;
+                _VDbContext.SaveChanges();
+            }
+            /////////////////////////
+
+            
+
+
+
             return RedirectToAction(nameof(Index));
         }
 
@@ -77,16 +123,16 @@ namespace Vroom.Controllers
         //    return RedirectToAction(nameof(Index));
         //}
 
-        //public IActionResult Delete(int id)
-        //{
-        //    var model = _VDbContext.Models.Find(id);
-        //    if (model == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    _VDbContext.Models.Remove(model);
-        //    _VDbContext.SaveChanges();
-        //    return RedirectToAction(nameof(Index));
-        //}
+        public IActionResult Delete(int id)
+        {
+            var bike = _VDbContext.Bikes.Find(id);
+            if (bike == null)
+            {
+                return NotFound();
+            }
+            _VDbContext.Bikes.Remove(bike);
+            _VDbContext.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

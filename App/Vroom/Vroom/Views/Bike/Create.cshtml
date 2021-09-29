@@ -8,7 +8,7 @@
 <br />
 
 <h2 class="text-info">Add Bike</h2>
-<form method="post" action="Create">
+<form method="post" enctype="multipart/form-data" action="Create">
     <div class="form-group row">
         <div class="col-2">
             <label asp-for="Makes"></label>
@@ -16,6 +16,14 @@
 
         <div class="col-4">
             <select asp-for="Bike.MakeId" asp-items="Model.Makes.ToSelectListItem()" class="form-control"></select>
+        </div>
+
+        <div class="col-auto">
+            <label asp-for="Bike.ImagePath"></label>
+        </div>
+
+        <div class="col-4">
+            <input type="file" name="files" class="form-control" />
         </div>
     </div>
     <br />
