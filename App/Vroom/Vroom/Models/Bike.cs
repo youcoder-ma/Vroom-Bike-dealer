@@ -26,15 +26,13 @@ namespace Vroom.Models
         public int ModelId { get; set; }
 
         [Required]
-        [RegularExpression("^[1-9]", ErrorMessage = "Invalid year*")]
         [Display(Name = "Year :")]
         [TillDate(1980,ErrorMessage ="Invalid Year")]
         public int Year { get; set; }
 
         [Required]
-        [RegularExpression("^[1-9]", ErrorMessage = "Provide Milleage*")]
         [Display(Name = "Milleage :")]
-        [Range(1, int.MaxValue, ErrorMessage = "Provide Milleage")]
+        [Range(1, int.MaxValue, ErrorMessage = "Provide Milleage*")]
         public int Milleage { get; set; }
 
         [Display(Name = "Features :")]
