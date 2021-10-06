@@ -16,6 +16,7 @@
 
         <div class="col-4">
             <select asp-for="Bike.MakeId" asp-items="Model.Makes.ToSelectListItem()" class="form-control"></select>
+            <span asp-validation-for="Bike.MakeId" class="text-danger"></span>
         </div>
 
         <div class="col-auto">
@@ -33,6 +34,7 @@
         </div>
         <div class="col-4">
             <select asp-for="Bike.ModelId" asp-items="Model.Models.ToSelectListItem()" class="form-control"></select>
+            <span asp-validation-for="Bike.ModelId" class="text-danger"></span>
         </div>
     </div>
     <br />
@@ -42,6 +44,7 @@
         </div>
         <div class="col-4">
             <Input asp-for="Bike.Year" class="form-control"></Input>
+            <span asp-validation-for="Bike.Year" class="text-danger"></span>
         </div>
     </div>
     <br />
@@ -51,6 +54,7 @@
         </div>
         <div class="col-4">
             <Input asp-for="Bike.Milleage" class="form-control"></Input>
+            <span asp-validation-for="Bike.Milleage" class="text-danger"></span>
         </div>
     </div>
     <br />
@@ -60,12 +64,14 @@
         </div>
         <div class="col-4">
             <Input asp-for="Bike.Price" class="form-control"></Input>
+            <span asp-validation-for="Bike.Price" class="text-danger"></span>
         </div>
         <div class="col-1">
             <label asp-for="Bike.Currency"></label>
         </div>
         <div class="col-4">
             <select asp-for="Bike.Currency" asp-items="Model.Currencies.ToSelectListItem()" class="form-control"></select>
+            <span asp-validation-for="Bike.Currency" class="text-danger"></span>
         </div>
 
     </div>
@@ -85,6 +91,7 @@
         </div>
         <div class="col-4">
             <Input asp-for="Bike.SellerName" class="form-control"></Input>
+            <span asp-validation-for="Bike.SellerName" class="text-danger"></span>
         </div>
     </div>
     <br />
@@ -103,6 +110,7 @@
         </div>
         <div class="col-4">
             <Input asp-for="Bike.SellerPhone" class="form-control"></Input>
+            <span asp-validation-for="Bike.SellerPhone" class="text-danger"></span>
         </div>
     </div>
 

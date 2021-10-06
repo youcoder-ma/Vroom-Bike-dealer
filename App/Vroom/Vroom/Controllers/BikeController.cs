@@ -51,6 +51,8 @@ namespace Vroom.Controllers
         {
             if (!ModelState.IsValid)
             {
+                BikeVM.Makes = _VDbContext.Makes.ToList();
+                BikeVM.Models = _VDbContext.Models.ToList();
                 return View(BikeVM);
             }
             _VDbContext.Bikes.Add(BikeVM.Bike);
