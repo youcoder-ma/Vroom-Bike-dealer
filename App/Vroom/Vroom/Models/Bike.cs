@@ -14,20 +14,20 @@ namespace Vroom.Models
         
         public Make Make { get; set; }
         [Required]
-        [RegularExpression("^[1-9]", ErrorMessage = "Select Make of bike*")]
+        [RegularExpression("^[a-z]", ErrorMessage = "Please select a make*")]
         [Display(Name = "Make :")]
         public int MakeId { get; set; }
 
         
         public Model Model { get; set; }
         [Required]
-        [RegularExpression("^[1-9]", ErrorMessage = "Select Model of bike*")]
+        [RegularExpression("^[a-z]", ErrorMessage = "Please select a model*")]
         [Display(Name = "Model :")]
         public int ModelId { get; set; }
 
         [Required]
         [Display(Name = "Year :")]
-        [TillDate(1980,ErrorMessage ="Invalid Year")]
+        [TillDate(1980, ErrorMessage ="Invalid Year")]
         public int Year { get; set; }
 
         [Required]
@@ -50,8 +50,7 @@ namespace Vroom.Models
         [Display(Name = "Seller Phone :")]
         public string SellerPhone { get; set; }
 
-        [Required]
-        [RegularExpression("^[1-9]", ErrorMessage = "Give your vehicle a price*")]
+        [Required(ErrorMessage ="Please Give it a price")]
         [Display(Name = "Price :")]
         public int Price { get; set; }
 
